@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%-include('base/header.ejs') %>
+
+    <title>users</title>
+</head>
+
+<body>
+    
+    <h2>회원 전체 조회</h2>
+
+    <table border="1">
+        <th>번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <% var j = 1; %>
+        <% for( var i in users ) { %>
+        <tr>
+            <td><%= j %></td>
+            <td><a href="/users/user_info/<%= users[i].user_id%>"><%= users[i].user_name %></a></td>
+            <td><%= users[i].user_age %></td>
+        </tr>
+        <% j++; } %>
+    </table>
+</body>
+
+</html>

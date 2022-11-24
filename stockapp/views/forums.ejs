@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%-include('base/header.ejs') %>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>forums</title>
+</head>
+
+<body>
+    <%-include('base/navbarTop.ejs')-%>
+
+    <h1>게시판</h1>
+<table>
+    <tr>
+        <th>글 번호</th>
+        <th>글 제목</th>
+        <th>작성자</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>post1</td>
+        <td>author1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>post2</td>
+        <td>author2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>post3</td>
+        <td>author3</td>
+    </tr>
+</table>
+<%-include('base/footer.ejs')%>
+
+</body>
+
+</html>

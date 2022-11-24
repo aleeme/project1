@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%-include('base/header.ejs') %>
+
+    <title><%= user.user_id %>'s info</title>
+</head>
+
+<body>
+    <%-include('base/navbarTop.ejs')-%>
+
+    <h2><%= user.user_id %></h2>
+
+    <table border="1">
+        <tr>
+            <td>이름</td>
+            <td><%= user.user_name %></td>
+        </tr>
+        <tr>
+            <td>나이</td>
+            <td><%= user.user_age %></td>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td><%= user.user_email %></td>
+        </tr>
+        <tr>
+            <td>가입일</td>
+            <td><%= user.reg_date %></td>
+        </tr>
+        <tr>
+            <td colspan="1">
+                <a href="/users">목록으로 돌아가기</a>
+            </td>
+        </tr>
+    </table>
+    <%-include('base/footer.ejs')%>
+
+</body>
+
+</html>

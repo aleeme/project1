@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%-include('base/header.ejs') %>
+
+        <title>Register</title>
+</head>
+
+<body>
+    <%-include('base/navbarTop.ejs')-%>
+        <h1>Sign Up</h1>
+        <p>계정을 생성하려면 아래 공백란을 모두 입력해주세요.</p>
+
+        <form action="/auth/register_process" method="post">
+                <label for="userId"><b>User Id</b></label>
+                <input type="text" placeholder="Enter User Id" name="userId" id="userId" required><br>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="uname" required><br>
+
+                <label for="age"><b>Age</b></label>
+                <input type="text" placeholder="Enter Your Age" name="age" id="age" required><br>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+            
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="pswr" id="pswr" required><br>
+
+                <button type="button" onclick="location.href='/'">Cancel</button>
+                <button type="submit">Sign Up</button><br>
+        
+                <div style="color:red;"><p><%= feedback %></p></div>
+            </form>
+        
+
+        <%-include('base/footer.ejs')%>
+
+</body>
+
+</html>
